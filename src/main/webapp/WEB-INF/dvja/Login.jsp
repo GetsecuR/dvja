@@ -40,7 +40,7 @@
                 </div>
             </div>
          </div>
-  </div> <% </div></div> %>
+  </div>
     <jsp:include page="common/Footer.jsp"></jsp:include>
 </body>
 </html>

@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><i class='fa fa-bug'></i> Damn Vulnerable Java Application - DEVSECOPS</a>
+      <a class="navbar-brand" href="/"><i class='fa fa-bug'></i> Damn Vulnerable Java Application - DEVOPS</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class='nav navbar-nav'>

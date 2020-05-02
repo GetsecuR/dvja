@@ -21,6 +21,15 @@ pipeline {
         sh 'cat trufflehogout'
       }
     }
+    stage ('Source Compositon Analysis') {
+      steps {
+        sh 'rm OWASP* || true'
+        sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh"'
+        sh 'chmod +x OWASP-dependency-check.sh'
+        sh 'bash OWASP-dependency-check.sh'
+        sh 'cat /var/lib/jenkins/OWASP-dependency-check/reports/dependency-check-suppression.xml'
+      }
+    }
     stage ('Build') {
       steps {
         sh 'mvn clean package'
@@ -35,4 +44,3 @@ pipeline {
    }
  }
 }
-

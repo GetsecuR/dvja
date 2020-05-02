@@ -15,7 +15,7 @@ pipeline {
     stage ('Check-Git-Secrets') {
       steps {
         sh 'rm trufflehog || true'
-        sh 'docker run gesellix/trufflehog --json https://github.com/GetsecuR/Webapptj.git > trufflehog'
+        sh 'docker run gesellix/trufflehog --json https://github.com/GetsecuR/webapp_Bwap.git > trufflehog'
         sh 'pwd'
         sh 'ls'
         sh 'cat trufflehog'

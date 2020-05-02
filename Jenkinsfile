@@ -30,7 +30,7 @@ pipeline {
         sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh"'
         sh 'chmod +x OWASP-dependency-check.sh'
         sh 'bash OWASP-dependency-check.sh'
-        sh 'cat /var/lib/jenkins/workspace/Devsecops_DVJA/odc-reports/dependency-check-suppression.xml'
+        sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-suppression.xml'
       }
     }
     stage ('Build') {

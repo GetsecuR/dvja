@@ -17,7 +17,7 @@ pipeline {
         sh 'rm trufflehogout || true'
         sh 'docker run gesellix/trufflehog --json https://github.com/GetsecuR/dvja.git > trufflehogout'
         sh 'pwd'
-        sh 'ls'
+        sh 'whoami'
         sh 'cat trufflehogout'
       }
     }
@@ -25,6 +25,7 @@ pipeline {
       steps {
         sh 'rm OWASP* || true'
         sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh"'
+        sh 'whoami'
         sh 'chmod +x OWASP-dependency-check.sh'
         sh 'bash OWASP-dependency-check.sh'
         sh 'cat /var/lib/jenkins/OWASP-dependency-check/reports/dependency-check-suppression.xml'

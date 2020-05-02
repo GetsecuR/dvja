@@ -27,6 +27,7 @@ pipeline {
         sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh"'
         sh 'whoami'
         sh 'chmod +x OWASP-dependency-check.sh'
+        sh 'sudo usermod -a -G docker jenkins'
         sh 'bash OWASP-dependency-check.sh'
         sh 'cat /var/lib/jenkins/OWASP-dependency-check/reports/dependency-check-suppression.xml'
       }

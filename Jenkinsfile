@@ -23,9 +23,11 @@ pipeline {
     }
     stage ('Source Compositon Analysis') {
       steps {
+        sh 'pwd'
+        sh 'whoami'
+        sh 'ls'
         sh 'rm OWASP* || true'
         sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh"'
-        sh 'whoami'
         sh 'chmod +x OWASP-dependency-check.sh'
         sh 'bash OWASP-dependency-check.sh'
         sh 'cat /var/lib/jenkins/OWASP-dependency-check/reports/dependency-check-suppression.xml'

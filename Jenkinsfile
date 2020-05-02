@@ -18,6 +18,7 @@ pipeline {
         sh 'docker run gesellix/trufflehod --json https://github.com/GetsecuR/dvja.git > trufflehog'
         sh 'cat trufflehog'
       }
+    }
     stage ('Build') {
       steps {
         sh 'mvn clean package'

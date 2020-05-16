@@ -28,7 +28,7 @@ pipeline {
          sh 'pwd'
          sh 'whoami'
          sh 'chmod +x OWASP-dependency-check.sh'
-         sh 'bash owasp-dependency-check.sh'
+         sh 'bash OWASP-dependency-check.sh'
       }
     }
     stage ('Build') {

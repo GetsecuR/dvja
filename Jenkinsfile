@@ -27,7 +27,7 @@ pipeline {
          sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh" '
          sh 'pwd'
          sh 'whoami'
-         sh 'chmod +x owasp-dependency-check.sh'
+         sh 'chmod +x OWASP-dependency-check.sh'
          sh 'bash owasp-dependency-check.sh'
       }
     }

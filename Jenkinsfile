@@ -23,7 +23,7 @@ pipeline {
     }
     stage ('Source Composition Analysis') {
       steps {
-         sh 'rm owasp* || true'
+         sh 'rm OWASP* || true'
          sh 'wget "https://raw.githubusercontent.com/GetsecuR/dvja/master/OWASP-dependency-check.sh" '
          sh 'pwd'
          sh 'whoami'
